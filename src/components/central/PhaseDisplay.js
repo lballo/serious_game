@@ -20,14 +20,13 @@ export default function PhaseDisplay({ sessionCode }) {
   );
 
   if (!session || !scenario) {
-    return (
-      <div className="screen-loading">
-        Chargement...
-      </div>
-    );
+    return <div className="screen-loading">Chargement...</div>;
   }
 
-  const currentPhaseName = phase?.nom || `Phase ${phaseId}`;
+  // ✅ Utilisé (sinon ESLint no-unused-vars)
+  const currentPhaseName =
+    phase?.nom || (phaseId ? `Phase ${phaseId}` : "Phase");
+
   const isPaused = !!phaseActuelle.pausedAt;
   const isRunning = !!phaseActuelle.phaseEndsAt && !isPaused;
   const timerClass = isRunning ? "running" : isPaused ? "paused" : "stopped";
@@ -35,7 +34,10 @@ export default function PhaseDisplay({ sessionCode }) {
   // Calcul de l'index de phase et du total
   const phases = scenario?.phases || {};
   const phaseIds = Object.keys(phases);
-  const currentPhaseIndex = phaseIds.indexOf(phaseId) + 1;
+
+  // ✅ Si phaseId est undefined, indexOf renvoie -1 -> on sécurise
+  const rawIndex = phaseIds.indexOf(phaseId);
+  const currentPhaseIndex = rawIndex >= 0 ? rawIndex + 1 : 0;
   const totalPhases = phaseIds.length;
 
   return (
@@ -44,8 +46,18 @@ export default function PhaseDisplay({ sessionCode }) {
         {/* Header */}
         <div className="screen-header">
           <h1 className="screen-title">{scenario.titre || "ADMR CHANGE LAB"}</h1>
+
+          {/* ✅ On affiche le nom de phase ici */}
+          <p className="screen-phase-name">{currentPhaseName}</p>
+
           <p className="screen-subtitle">
-            Session {session.codeSession || sessionCode} • Phase {currentPhaseIndex}/{totalPhases}
+            Session {session.codeSession || sessionCode}
+            {" • "}
+            {totalPhases > 0 ? (
+              <>Phase {currentPhaseIndex}/{totalPhases}</>
+            ) : (
+              <>Phase</>
+            )}
           </p>
         </div>
 

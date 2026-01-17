@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ref, set, get } from "firebase/database";
+import { ref, set } from "firebase/database";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { database } from "../firebase";
 import { useFirebaseValue } from "../lib/firebaseHooks";

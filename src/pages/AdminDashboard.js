@@ -4,7 +4,6 @@ import { ref, set, remove } from "firebase/database";
 import { database } from "../firebase";
 import { useFirebaseValue } from "../lib/firebaseHooks";
 import PageShell from "../components/ui/PageShell";
-import TopHeader from "../components/ui/TopHeader";
 import Card from "../components/ui/Card";
 import PrimaryButton from "../components/ui/PrimaryButton";
 import ConfirmModal from "../components/ui/ConfirmModal";

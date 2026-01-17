@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ref, set, get } from "firebase/database";
 import { database } from "../../firebase";
 import { attribuerRole } from "../../lib/gameUtils";
-import { useFirebaseValue } from "../../lib/firebaseHooks";
 import PageShell from "../ui/PageShell";
 import Card from "../ui/Card";
 import PrimaryButton from "../ui/PrimaryButton";
@@ -13,10 +12,6 @@ export default function JoinSession({ onJoin }) {
   const [prenom, setPrenom] = useState("");
   const [joining, setJoining] = useState(false);
   const [error, setError] = useState("");
-
-  const { value: session } = useFirebaseValue(
-    sessionCode ? `sessions/${sessionCode}` : null
-  );
 
   const handleJoin = async () => {
     setError("");

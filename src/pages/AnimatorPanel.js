@@ -11,7 +11,6 @@ export default function AnimatorPanel() {
   const { value: scenario } = useFirebaseValue(
     session?.scenarioId ? `scenarios/${session.scenarioId}` : null
   );
-  const { value: participants } = useFirebaseValue(`participants/${code}`);
 
   const phaseActuelle = session?.phaseActuelle || {};
   const phaseId = phaseActuelle.phaseId;
