@@ -1,0 +1,132 @@
+.admin-dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.admin-dashboard-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.admin-dashboard-back-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  transition: background 0.2s;
+}
+
+.admin-dashboard-back-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.admin-dashboard-header-card {
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.admin-dashboard-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.admin-dashboard-header-text {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex: 1;
+}
+
+.admin-dashboard-header-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-card-blue);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.admin-dashboard-title {
+  font-size: 32px;
+  font-weight: var(--font-weight-black);
+  color: var(--blue-dark);
+  margin: 0;
+}
+
+.admin-dashboard-subtitle {
+  font-size: 14px;
+  color: var(--grey-text);
+  margin: var(--spacing-xs) 0 0 0;
+}
+
+.admin-dashboard-create-button {
+  flex-shrink: 0;
+}
+
+.admin-dashboard-scenarios-card {
+  padding: var(--spacing-xl);
+}
+
+.admin-dashboard-scenarios-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.admin-dashboard-scenarios-icon {
+  font-size: 24px;
+}
+
+.admin-dashboard-scenarios-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  margin: 0;
+}
+
+.admin-dashboard-empty {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+}
+
+.admin-dashboard-empty-text {
+  font-size: 16px;
+  color: var(--grey-text);
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.admin-dashboard-scenarios-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .admin-dashboard-create-button {
+    width: 100%;
+  }
+  
+  .admin-dashboard-title {
+    font-size: 24px;
+  }
+  
+  .admin-dashboard-header-card,
+  .admin-dashboard-scenarios-card {
+    padding: var(--spacing-lg);
+  }
+}

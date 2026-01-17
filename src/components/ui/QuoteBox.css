@@ -1,0 +1,23 @@
+.quote-box {
+  background: var(--blue-light);
+  border-left: 4px solid var(--blue-mid);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+}
+
+.quote-icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.quote-text {
+  color: var(--grey-text);
+  font-size: 15px;
+  line-height: 1.6;
+  font-style: italic;
+}

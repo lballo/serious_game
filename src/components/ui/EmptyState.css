@@ -1,0 +1,20 @@
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--grey-light);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border);
+}
+
+.empty-state-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.5;
+}
+
+.empty-state-message {
+  font-size: 16px;
+  color: var(--grey-text);
+  margin: 0 0 var(--spacing-lg) 0;
+}

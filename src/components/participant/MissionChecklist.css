@@ -1,0 +1,56 @@
+.mission-checklist-card {
+  padding: var(--spacing-lg);
+}
+
+.mission-checklist-empty {
+  color: var(--grey-text);
+  margin: var(--spacing-md) 0 0 0;
+}
+
+.mission-checklist-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.mission-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mission-checklist-item:hover {
+  border-color: var(--blue-mid);
+  box-shadow: var(--shadow-sm);
+}
+
+.mission-checklist-item-checked {
+  border-color: var(--green);
+  background: var(--grey-light);
+}
+
+.mission-checklist-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.mission-checklist-text {
+  flex: 1;
+  line-height: 1.5;
+  color: var(--blue-dark);
+}
+
+.mission-checklist-item-checked .mission-checklist-text {
+  text-decoration: line-through;
+  color: var(--grey-text);
+}

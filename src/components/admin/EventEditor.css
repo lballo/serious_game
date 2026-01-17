@@ -1,0 +1,70 @@
+.event-editor-form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.event-editor-fields {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.event-editor-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.event-editor-label {
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  font-size: 14px;
+}
+
+.event-editor-input,
+.event-editor-textarea {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--blue-dark);
+  transition: all 0.2s;
+}
+
+.event-editor-input:focus,
+.event-editor-textarea:focus {
+  outline: none;
+  border-color: var(--blue-mid);
+  box-shadow: 0 0 0 3px rgba(31, 91, 157, 0.1);
+}
+
+.event-editor-input:disabled {
+  background: var(--grey-light);
+  cursor: not-allowed;
+}
+
+.event-editor-textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.event-editor-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.event-editor-actions button {
+  flex: 1;
+}
+
+.event-editor-helper {
+  font-size: 12px;
+  color: var(--grey-text);
+  margin: 0;
+  font-style: italic;
+}

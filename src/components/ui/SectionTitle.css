@@ -1,0 +1,20 @@
+.section-title {
+  margin: 0 0 var(--spacing-md) 0;
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  color: var(--grey-text);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-title-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.section-title-text {
+  line-height: 1.4;
+}

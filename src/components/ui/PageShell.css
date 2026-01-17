@@ -1,0 +1,15 @@
+.page-shell {
+  min-height: 100vh;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .page-shell {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+}

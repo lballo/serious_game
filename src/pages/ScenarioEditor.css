@@ -1,0 +1,107 @@
+.scenario-editor-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.scenario-editor-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  margin-bottom: var(--spacing-lg);
+  transition: background 0.2s;
+}
+
+.scenario-editor-back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.scenario-editor-title {
+  font-size: 48px;
+  font-weight: var(--font-weight-black);
+  color: var(--white);
+  margin: 0 0 var(--spacing-2xl) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.scenario-editor-loading {
+  text-align: center;
+  padding: var(--spacing-3xl);
+  color: var(--white);
+  font-size: 18px;
+}
+
+.scenario-editor-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.scenario-editor-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.scenario-editor-label {
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  font-size: 14px;
+}
+
+.scenario-editor-input,
+.scenario-editor-textarea {
+  padding: var(--spacing-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-family: var(--font-family);
+  color: var(--blue-dark);
+  transition: all 0.2s;
+}
+
+.scenario-editor-input:focus,
+.scenario-editor-textarea:focus {
+  outline: none;
+  border-color: var(--blue-mid);
+  box-shadow: 0 0 0 3px rgba(31, 91, 157, 0.1);
+}
+
+.scenario-editor-textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.scenario-editor-save-button {
+  width: 100%;
+  margin-top: var(--spacing-md);
+}
+
+.scenario-editor-editor-wrapper {
+  margin-bottom: var(--spacing-lg);
+}
+
+.scenario-editor-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .scenario-editor-title {
+    font-size: 32px;
+  }
+  
+  .scenario-editor-container {
+    padding: 0 var(--spacing-sm);
+  }
+}

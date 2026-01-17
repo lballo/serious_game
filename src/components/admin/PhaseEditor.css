@@ -1,0 +1,55 @@
+.phase-editor-form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.phase-editor-fields {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.phase-editor-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.phase-editor-label {
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  font-size: 14px;
+}
+
+.phase-editor-input {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--blue-dark);
+  transition: all 0.2s;
+}
+
+.phase-editor-input:focus {
+  outline: none;
+  border-color: var(--blue-mid);
+  box-shadow: 0 0 0 3px rgba(31, 91, 157, 0.1);
+}
+
+.phase-editor-input:disabled {
+  background: var(--grey-light);
+  cursor: not-allowed;
+}
+
+.phase-editor-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.phase-editor-actions button {
+  flex: 1;
+}

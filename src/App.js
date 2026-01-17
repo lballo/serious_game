@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Home from "./pages/Home";
+import AdminDashboard from "./pages/AdminDashboard";
+import ScenarioEditor from "./pages/ScenarioEditor";
+import SessionCreator from "./pages/SessionCreator";
+import AnimatorPanel from "./pages/AnimatorPanel";
+import ParticipantPanel from "./pages/ParticipantPanel";
+import CentralScreen from "./pages/CentralScreen";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/scenario/:scenarioId" element={<ScenarioEditor />} />
+        <Route path="/admin/scenario" element={<ScenarioEditor />} />
+
+        <Route path="/session/create" element={<SessionCreator />} />
+
+        <Route path="/animator/:code" element={<AnimatorPanel />} />
+        <Route path="/play" element={<ParticipantPanel />} />
+        <Route path="/screen/:code" element={<CentralScreen />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

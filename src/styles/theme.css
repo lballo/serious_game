@@ -1,0 +1,76 @@
+:root {
+  /* Couleurs principales */
+  --blue-dark: #0B2D4D;
+  --blue-mid: #1F5B9D;
+  --blue-light: #EAF3FF;
+  --white: #FFFFFF;
+  --grey-text: #5B6777;
+  --grey-light: #F5F7FA;
+  --orange: #F39A1D;
+  --green: #2ECC71;
+  --danger: #e74c3c;
+  --border: rgba(11, 45, 77, 0.15);
+  
+  /* Dégradés */
+  --gradient-blue: linear-gradient(180deg, #0B2D4D 0%, #1F5B9D 100%);
+  --gradient-blue-reverse: linear-gradient(180deg, #1F5B9D 0%, #0B2D4D 100%);
+  --gradient-card-blue: linear-gradient(135deg, #1F5B9D 0%, #0B2D4D 100%);
+  
+  /* Rayons de bordure */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  
+  /* Ombres */
+  --shadow-sm: 0 2px 8px rgba(11, 45, 77, 0.08);
+  --shadow-md: 0 4px 16px rgba(11, 45, 77, 0.12);
+  --shadow-lg: 0 8px 24px rgba(11, 45, 77, 0.16);
+  
+  /* Espacements */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  --spacing-3xl: 48px;
+  
+  /* Typographie */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--gradient-blue);
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(31, 91, 157, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}

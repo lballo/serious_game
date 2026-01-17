@@ -1,0 +1,114 @@
+.role-editor-form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.role-editor-fields {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.role-editor-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.role-editor-label {
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  font-size: 14px;
+}
+
+.role-editor-input,
+.role-editor-textarea {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--blue-dark);
+  transition: all 0.2s;
+}
+
+.role-editor-input:focus,
+.role-editor-textarea:focus {
+  outline: none;
+  border-color: var(--blue-mid);
+  box-shadow: 0 0 0 3px rgba(31, 91, 157, 0.1);
+}
+
+.role-editor-input:disabled {
+  background: var(--grey-light);
+  cursor: not-allowed;
+}
+
+.role-editor-textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.role-editor-mission-input {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.role-editor-mission-input .role-editor-input {
+  flex: 1;
+}
+
+.role-editor-missions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.role-editor-mission-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: var(--grey-light);
+  border-radius: var(--radius-sm);
+}
+
+.role-editor-mission-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--blue-dark);
+}
+
+.role-editor-mission-remove {
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--danger);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.role-editor-mission-remove:hover {
+  background: #c0392b;
+}
+
+.role-editor-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.role-editor-actions button {
+  flex: 1;
+}

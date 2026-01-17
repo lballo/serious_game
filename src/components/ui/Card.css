@@ -1,0 +1,33 @@
+.card {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+}
+
+.card-default {
+  background: var(--white);
+}
+
+.card-blue {
+  background: var(--gradient-card-blue);
+  color: var(--white);
+}
+
+.card-clickable {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-xl);
+  }
+}

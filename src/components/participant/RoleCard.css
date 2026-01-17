@@ -1,0 +1,333 @@
+.role-card {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--spacing-lg);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Header centré */
+.role-card-header {
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  text-align: center;
+  background: var(--white);
+}
+
+.role-card-icon-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--spacing-lg);
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+
+.role-card-icon {
+  font-size: 56px;
+  line-height: 1;
+  display: block;
+}
+
+.role-card-title {
+  font-size: 32px;
+  font-weight: var(--font-weight-black);
+  color: var(--blue-dark);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Barre séparatrice orange */
+.role-card-divider {
+  height: 2px;
+  background: var(--orange);
+  margin: 0;
+}
+
+/* Contenu principal */
+.role-card-content {
+  padding: var(--spacing-xl);
+}
+
+/* Section Psychologie */
+.role-card-psychology-section {
+  background: var(--white);
+  border-left: 4px solid var(--blue-mid);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.role-card-section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.role-card-section-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.role-card-section-title {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  margin: 0;
+}
+
+.role-card-psychology-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--grey-text);
+  margin: 0;
+}
+
+/* Citation Box */
+.role-card-quote-box {
+  background: var(--blue-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
+
+.role-card-quote-icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.role-card-quote-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--grey-text);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Section Attention (Warning Box) */
+.role-card-attention-box {
+  background: #fff3e0;
+  border-left: 4px solid #E7A03C;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
+
+.role-card-attention-icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.role-card-attention-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--blue-dark);
+  margin: 0;
+}
+
+/* Section Missions secrètes */
+.role-card-missions-section {
+  background: var(--white);
+  border-left: 4px solid var(--blue-mid);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.role-card-missions-description {
+  font-size: 14px;
+  color: var(--grey-text);
+  line-height: 1.6;
+  margin: var(--spacing-sm) 0 var(--spacing-lg) 0;
+}
+
+.role-card-missions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  padding-left: var(--spacing-2xl);
+}
+
+/* Barre verticale verte à gauche de la liste */
+.role-card-missions-list::before {
+  content: '';
+  position: absolute;
+  left: var(--spacing-lg);
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--green);
+  border-radius: var(--radius-sm);
+  z-index: 0;
+}
+
+.role-card-mission-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 1;
+}
+
+.role-card-mission-checkbox-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.role-card-mission-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--green);
+  border-radius: 4px;
+  background: var(--white);
+  cursor: pointer;
+  appearance: none;
+  margin: 0;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.role-card-mission-checkbox:checked {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.role-card-mission-checkmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.role-card-mission-item-checked .role-card-mission-checkbox {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.role-card-mission-text {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--blue-dark);
+  padding-top: 2px;
+}
+
+.role-card-mission-item-checked .role-card-mission-text {
+  color: var(--grey-text);
+  text-decoration: line-through;
+}
+
+/* Barre de progression */
+.role-card-progress {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+}
+
+.role-card-progress-text {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.role-card-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--grey-light);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.role-card-progress-fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.role-card-loading {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--grey-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .role-card {
+    border-radius: var(--radius-xl);
+    max-width: 100%;
+  }
+  
+  .role-card-header {
+    padding: var(--spacing-lg);
+  }
+  
+  .role-card-icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .role-card-icon {
+    font-size: 44px;
+  }
+  
+  .role-card-title {
+    font-size: 24px;
+  }
+  
+  .role-card-content {
+    padding: var(--spacing-lg);
+  }
+  
+  .role-card-psychology-section,
+  .role-card-attention-box {
+    padding: var(--spacing-md);
+  }
+  
+  .role-card-missions-section {
+    padding: var(--spacing-md);
+  }
+  
+  .role-card-missions-list {
+    padding-left: var(--spacing-xl);
+  }
+  
+  .role-card-missions-list::before {
+    left: var(--spacing-md);
+  }
+  
+  .role-card-mission-item {
+    padding: 14px 16px;
+  }
+}

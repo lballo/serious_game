@@ -1,0 +1,436 @@
+.session-creator-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.session-creator-loading {
+  text-align: center;
+  padding: var(--spacing-3xl);
+  color: var(--white);
+}
+
+.session-creator-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  margin-bottom: var(--spacing-lg);
+  transition: all 0.2s;
+}
+
+.session-creator-back-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Header Card */
+.session-creator-header-card {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-xl) var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.session-creator-header-icon {
+  font-size: 48px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.session-creator-header-content {
+  flex: 1;
+}
+
+.session-creator-title {
+  font-family: 'Raleway', var(--font-family);
+  font-size: 36px;
+  font-weight: var(--font-weight-black);
+  color: var(--blue-dark);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.session-creator-subtitle {
+  font-size: 16px;
+  color: var(--grey-text);
+  margin: 0;
+}
+
+/* Main Content Card */
+.session-creator-main-card {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.session-creator-field {
+  margin-bottom: var(--spacing-xl);
+}
+
+.session-creator-label {
+  display: block;
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  font-size: 14px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.session-creator-select {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-family: var(--font-family);
+  color: var(--blue-dark);
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.session-creator-select:focus {
+  outline: none;
+  border-color: var(--blue-mid);
+  box-shadow: 0 0 0 3px rgba(31, 91, 157, 0.1);
+}
+
+/* Scenario Preview Card */
+.session-creator-scenario-preview {
+  border: 2px solid var(--blue-mid);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  background: var(--blue-light);
+  margin-top: var(--spacing-md);
+}
+
+.session-creator-scenario-title {
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.session-creator-scenario-description {
+  font-size: 14px;
+  color: var(--grey-text);
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.session-creator-scenario-badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+/* Divider */
+.session-creator-divider {
+  height: 2px;
+  background: #FF6B35;
+  margin: var(--spacing-xl) 0;
+  border-radius: 1px;
+}
+
+/* Roles Section */
+.session-creator-roles-section {
+  margin-top: var(--spacing-lg);
+}
+
+.session-creator-roles-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  margin: 0 0 var(--spacing-lg) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.session-creator-roles-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.session-creator-roles-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Role Item */
+.session-creator-role-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.session-creator-role-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.session-creator-role-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.session-creator-role-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.session-creator-role-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.session-creator-role-name {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.session-creator-role-id {
+  font-size: 13px;
+  color: var(--grey-text);
+}
+
+.session-creator-role-quantity {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.session-creator-quantity-label {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-dark);
+  white-space: nowrap;
+}
+
+.session-creator-quantity-input {
+  width: 80px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  color: var(--blue-dark);
+  transition: all 0.2s;
+}
+
+.session-creator-quantity-input:focus {
+  outline: none;
+  border-color: var(--blue-mid);
+  box-shadow: 0 0 0 3px rgba(31, 91, 157, 0.1);
+}
+
+/* Total Bar */
+.session-creator-total-bar {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.session-creator-total-label {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--white);
+}
+
+.session-creator-total-value {
+  font-size: 48px;
+  font-weight: var(--font-weight-black);
+  color: var(--white);
+  font-family: monospace;
+}
+
+/* Info Box */
+.session-creator-info-box {
+  background: var(--blue-light);
+  border-left: 4px solid var(--blue-mid);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.session-creator-info-icon {
+  font-size: 24px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.session-creator-info-text {
+  font-size: 14px;
+  color: var(--grey-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Error Message */
+.session-creator-error-message {
+  background: #ffecec;
+  color: #b00020;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  font-size: 14px;
+}
+
+.session-creator-error {
+  color: #b00020;
+  font-size: 14px;
+  padding: var(--spacing-md);
+  background: #ffecec;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Submit Button */
+.session-creator-submit-button {
+  width: 100%;
+  margin-top: var(--spacing-lg);
+}
+
+/* Success Card */
+.session-creator-success-card {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: #eafff1;
+  border: 1px solid #b7f3c8;
+  border-radius: var(--radius-lg);
+}
+
+.session-creator-success-title {
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+  color: var(--blue-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.session-creator-success-code {
+  font-size: 18px;
+  color: var(--blue-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.session-creator-code-value {
+  font-weight: var(--font-weight-black);
+  font-family: monospace;
+  letter-spacing: 2px;
+}
+
+.session-creator-success-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-md);
+}
+
+.session-creator-success-link {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.session-creator-success-link-green {
+  background: var(--green);
+}
+
+.session-creator-success-link-green:hover {
+  background: #27ae60;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.session-creator-success-link-blue {
+  background: var(--blue-mid);
+}
+
+.session-creator-success-link-blue:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .session-creator-header-card {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-lg);
+  }
+  
+  .session-creator-title {
+    font-size: 28px;
+  }
+  
+  .session-creator-main-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .session-creator-role-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .session-creator-role-quantity {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .session-creator-quantity-input {
+    width: 100px;
+  }
+  
+  .session-creator-total-value {
+    font-size: 36px;
+  }
+  
+  .session-creator-success-actions {
+    flex-direction: column;
+  }
+  
+  .session-creator-success-link {
+    width: 100%;
+    text-align: center;
+  }
+}
